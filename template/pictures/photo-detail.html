@@ -1,0 +1,84 @@
+{% extends 'extender.html' %}
+
+
+{% block x %}
+
+<div class="container-fluid tm-container-content tm-mt-60">
+    <!-- Search form starts here  -->
+    <div style="display: flex; justify-content: right;">
+        <div class="row mb-4">
+            <form class="d-flex tm-search-form" action="{% url 'search' %}">
+                <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search"
+                    style="border-radius: 20px 0 0 20px;" name="q">
+                <button class="btn btn-outline-success tm-search-btn" type="submit"
+                    style="border-radius: 0 20px 20px 0;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- Search form ends here  -->
+
+    <!-- photo-detail starts here -->
+    <div class="row tm-mb-90">
+        <div class="col-xl-8 col-lg-7 col-md-6 col-sm-12">
+            <img src="{{ jo.webformatURL }}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-xl-4 col-lg-5 col-md-6 col-sm-12">
+            <div class="tm-bg-gray tm-video-details">
+                <div class="text-center mb-5">
+                    <a href="{{ jo.webformatURL }}?attachment" title="Download" id="link"
+                        class="btn btn-success tm-btn-big"> Download SD</a>
+                    <a href="{{ jo.largeImageURL }}?attachment" title="Download" id="link" class="btn btn-danger
+                     tm-btn-big">Download HD</a>
+                </div>
+                <div class="mb-4 d-flex flex-wrap">
+                    <div class="mr-4 mb-2">
+                        <span class="tm-text-gray-dark">Downloads: </span><span class="tm-text-primary">{{jo.downloads|floatformat }}</span>
+                    </div>
+                    <div class="mr-4 mb-2">
+                        <span class="tm-text-gray-dark">views: </span><span class="tm-text-primary">{{ jo.views }}</span>
+                    </div>
+                    <div class="mr-4 mb-2">
+                        <span class="tm-text-gray-dark">Format: </span><span class="tm-text-primary">JPG</span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h3 class="tm-text-gray-dark mb-3">License</h3>
+                    <p>Free for both personal and commercial use. No need to pay anything. No need to make any
+                        attribution.</p>
+                </div>
+                <div>
+                    <h3 class="tm-text-gray-dark mb-3">Tags</h3>
+                    <h5 class="col-12 tm-text-primary">
+                        <a href="{% url 'search' %}?q={{jo.tags|cut:','}}" name="q">{{jo.tags|cut:","}}</a>
+                    </h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- photo-detail ends here -->
+
+    <div class="row mb-4">
+        <h2 class="col-12 tm-text-primary">
+            Related Photos
+        </h2>
+    </div>
+    <div class="row mb-3 tm-gallery">
+        {% for x in josn %}
+
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <a href="{% url 'photo-detail' x.id x.tags %}">
+                    <img src="{{ x.webformatURL }}" alt="Image" class="img-fluid">
+                </a>
+            </figure>
+
+        </div>
+
+        {% endfor %}
+
+    </div> <!-- row -->
+</div> <!-- container-fluid, tm-container-content -->
+
+{% endblock x %}

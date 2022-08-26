@@ -1,0 +1,79 @@
+{% extends 'extender.html' %}
+{% load static %}
+
+{% block x %}
+
+{% if page is about %}
+<div class="container-fluid tm-mt-60">
+    <div class="row mb-4">
+        <h2 class="col-12 tm-text-primary">
+            About Picwarp Website
+        </h2>
+    </div>
+    <div class="row tm-mb-74 tm-row-1640">
+        <div class="col-lg-5 col-md-6 col-12 mb-3">
+            <img src="{% static 'img/icon.jpg' %}" alt="Image" class="img-fluid">
+        </div>
+        <div class="col-lg-7 col-md-6 col-12">
+            <div class="tm-about-img-text">
+                
+            </div>
+        </div>
+    </div>
+</div> <!-- container-fluid, tm-container-content -->
+{% else %}
+<div class="container-fluid tm-mt-60">
+    <div class="row mb-4">
+        <h2 class="col-12 tm-text-primary">
+            Use Agreement
+        </h2>
+    </div>
+    <div class="tm-about-img-text">
+        <p class="">
+            <br>
+        <h1></h1>
+        By using this Jamous Tech website, you agree to be bound by the terms and conditions set forth, so
+        you should read and take into consideration these terms:
+        <br><br>
+        1 :accept the agreement
+        By your use of this website, you signify your complete agreement to accept all terms and conditions
+        stated here. You must not use this website if you do not agree to any of these Standard Terms and
+        Conditions. Our terms and conditions are created in the Terms and Conditions form and Privacy Policy
+        form.
+        <br><br>
+        2 :We provide you with the authority to browse the site and reuse some content for personal purposes
+        only, and it is not permissible in any way to use the site for commercial purposes or to merge the
+        site with another site.
+        <br><br>
+        3 :limitations
+        If you use this website, you are prohibited from doing the following:
+        <br>
+        - Using the site in an illegal manner or violating the privacy policy.
+        <br>
+        - Do any conduct that disrupts, damages or damages the Site and interferes with the business or
+        private content of the Site or with the use of any other person.
+        <br>
+        - Use this site for the purpose of advertising, marketing or publicity without the prior permission
+        of the site owner.
+        <br>
+        - Spreading hate, racism, abusive speech or defamation of a person or a site where this exposes you
+        to legal liability.
+
+        <br>
+
+        Your conduct of any of the previous activities in violation of the site's policy exposes you to
+        legal accountability.
+        <br><br>
+        4 :Disclaimer
+        Your access to and use of the Site's content is at your own risk. The information we provide is for
+        general information purposes only. All information on the website is provided in good faith.
+        However, we make no representation or warranty of any kind, express or implied, as to the accuracy,
+        adequacy, correctness, reliability, availability or completeness of any information on the Site.
+        This agreement may be changed from one period to another as the site deems appropriate for its
+        objectives, so please review it and abide by its contents.
+        <br><br><br>
+    </div>
+</div>
+{% endif %}
+
+{% endblock x%}

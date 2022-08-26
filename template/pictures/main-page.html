@@ -1,0 +1,64 @@
+{% extends 'extender.html' %}
+{% load static %}
+
+{% block x %}
+<!-- Search form starts here -->
+<div class="tm-hero d-flex justify-content-center align-items-center" data-parallax="scroll"
+    data-image-src="{{ head|random}}" style="height: auto;">
+    <center>
+
+        <div class="" style="color: whitesmoke;">
+
+            <h3>Stunning free images &amp; royalty free stock</h3>
+            <h4>Over 2.6 million+ high quality stock images you can use anywhere</h4>
+            <div style="display: flex; justify-content: center;">
+                <form class="d-flex tm-search-form" action="{% url 'search' %}">
+                    <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search"
+                        style="border-radius: 20px 0 0 20px;" name="q">
+                    <button class="btn btn-outline-success tm-search-btn" type="submit"
+                        style="border-radius: 0 20px 20px 0;">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </center>
+</div>
+<!-- Search form ends her -->
+
+<div class="row tm-mb-90 tm-gallery">
+    <div class="row mb-4">
+        <center>
+            <h2 class="col-6 tm-text-primary">
+
+            </h2>
+        </center>
+    </div>
+    {% for x in pages %}
+    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5" style="padding: 0 3px 0 3px;">
+        <figure class="effect-ming tm-video-item">
+            <a href="{% url 'photo-detail' x.id x.tags %}">
+                <img src="{{ x.webformatURL }}" alt="Image" class="img-fluid">
+            </a>
+        </figure>
+    </div>
+    {% endfor %}
+    <!-- row -->
+
+    <div class="row tm-mb-90">
+        <div class="col-12 d-flex justify-content-between align-items-center tm-paging-col">
+
+            {% if pages.has_previous %}
+            <a href="?page={{ pages.previous_page_number }}" class="btn btn-primary tm-btn-prev mb-2">&laquo
+                Previous</a>
+            {% endif %}
+            {% if pages.has_next %}
+            ...
+            <a href="?page={{pages.next_page_number}}" class="btn btn-primary tm-btn-next">Next Page &raquo;</a>
+            {% endif %}
+        </div>
+    </div>
+
+</div> <!-- container-fluid, tm-container-content -->
+
+{% endblock x %}

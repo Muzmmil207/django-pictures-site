@@ -1,0 +1,366 @@
+{% extends 'extender.html' %}
+{% load static %}
+
+{% block x %}
+<div class="container-fluid tm-container-content tm-mt-60">
+    <div class="row mb-4">
+        <h2 class="col-6 tm-text-primary">
+            Categories
+        </h2>
+        <div class="col-6 d-flex justify-content-end align-items-center">
+            <form class="d-flex tm-search-form" action="{% url 'search' %}">
+                <input class="form-control tm-search-input" type="search" placeholder="Search" aria-label="Search"
+                    style="border-radius: 20px 0 0 20px;" name="q">
+                <button class="btn btn-outline-success tm-search-btn" type="submit"
+                    style="border-radius: 0 20px 20px 0;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="row tm-mb-90 tm-gallery">
+
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/img-08.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>city</h2>
+                    <a href="{% url 'search' %}?q=city" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">city</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/trees.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Green-Forest</h2>
+                    <a href="{% url 'search' %}?q=Green-Forest" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Green-Forest</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/love.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>love</h2>
+                    <a href="{% url 'search' %}?q=love" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">love</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/black.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>black</h2>
+                    <a href="{% url 'search' %}?q=black" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">black</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/HD-wallpaper.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>HD-wallpaper</h2>
+                    <a href="{% url 'search' %}?q=HD-wallpaper" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">HD-wallpaper</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Flower.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Flower</h2>
+                    <a href="{% url 'search' %}?q=Flower" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Flower</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Ocean.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Ocean</h2>
+                    <a href="{% url 'search' %}?q=Ocean" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Ocean</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Art.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Art</h2>
+                    <a href="{% url 'search' %}?q=Art" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Art</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/books.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>books</h2>
+                    <a href="{% url 'search' %}?q=books" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">books</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/fantasy.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>fantasy</h2>
+                    <a href="{% url 'search' %}?q=fantasy" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">fantasy</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/friends.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>friends</h2>
+                    <a href="{% url 'search' %}?q=friends" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">friends</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/pet.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>pet</h2>
+                    <a href="{% url 'search' %}?q=pet" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">pet</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/animals.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>animals</h2>
+                    <a href="{% url 'search' %}?q=animals" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">animals</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/coding.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>coding</h2>
+                    <a href="{% url 'search' %}?q=coding" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">coding</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/food.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>food</h2>
+                    <a href="{% url 'search' %}?q=food" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">food</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/fashion.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>fashion</h2>
+                    <a href="{% url 'search' %}?q=fashion" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">fashion</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Reading.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Reading</h2>
+                    <a href="{% url 'search' %}?q=Reading" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Reading</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/under water.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>under-water</h2>
+                    <a href="{% url 'search' %}?q=under-water" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">under-water</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Mindfulness-and-Meditation.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Mindfulness-and-Meditation</h2>
+                    <a href="{% url 'search' %}?q=Mindfulness-and-Meditation" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Mindfulness-and-Meditation</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Sunny.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Sunny</h2>
+                    <a href="{% url 'search' %}?q=Sunny" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Sunny</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Family.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Family</h2>
+                    <a href="{% url 'search' %}?q=Family" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Family</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/calligraphy.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>calligraphy</h2>
+                    <a href="{% url 'search' %}?q=calligraphy" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">calligraphy</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/traditions.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>traditions</h2>
+                    <a href="{% url 'search' %}?q=traditions" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">traditions</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/music.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>music</h2>
+                    <a href="{% url 'search' %}?q=music" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">music</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/anime.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>anime</h2>
+                    <a href="{% url 'search' %}?q=anime" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">anime</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 mb-5">
+            <figure class="effect-ming tm-video-item">
+                <img src="{% static 'img/Freedom.jpg' %}" alt="Image" class="img-fluid">
+                <figcaption class="d-flex align-items-center justify-content-center">
+                    <h2>Freedom</h2>
+                    <a href="{% url 'search' %}?q=Freedom" name="q">View more</a>
+                </figcaption>
+            </figure>
+            <div class="d-flex justify-content-between tm-text-gray">
+                <span class="tm-text-gray-light">Freedom</span>
+            </div>
+        </div>
+        <!-- ------------------- -->
+    </div> <!-- row -->
+</div> <!-- container-fluid, tm-container-content -->
+{% endblock %}
